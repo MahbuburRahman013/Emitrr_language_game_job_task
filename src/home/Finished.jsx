@@ -18,7 +18,7 @@ const Finished = ({all_score,setThreeScor,setTwoScor,setOneScor,setLevel}) => {
             score: all_score
          }
 
-         axios.put('http://localhost:5000/setUser', {userInfo})
+         axios.put('https://emitrr-server.vercel.app/setUser', {userInfo})
          .then(res=> {
             if(res.data.acknowledged){
                   toast.success('Added Score on Profile')

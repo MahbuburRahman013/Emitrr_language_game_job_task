@@ -59,26 +59,29 @@ const Registration = () => {
     }
 
     return (
-        <div className="container mx-auto px-5 flex justify-center ">
-            <div className="lg:w-[50%] w-full my-16 shadow-xl lg:px-7 py-9">
+        <div className="px-5 flex justify-center bg-black h-screen text-gray-300">
+            <div className="lg:w-[35%] md:w-[50%] w-[90%] my-16 shadow-xl lg:px-7 py-9">
                 <h1 className="text-center text-3xl font-semibold">Create An Account</h1>
                 <form onSubmit={handleRegister} className="w-full">
-                    <input placeholder="Your Name" className="block w-full outline-none bg-gray-100  py-2 text-base font-semibold px-3 my-3" type="text" name="name" />
-                    <input placeholder="Photo URL" className="block w-full outline-none bg-gray-100  py-2 text-base font-semibold px-3 my-3" type="text" name="photo" />
-                    <input placeholder="Email" className="block w-full outline-none bg-gray-100  py-2 text-base font-semibold px-3 my-3" type="email" name="email" />
-                    <input placeholder="Password" className="block w-full outline-none bg-gray-100  py-2 text-base font-semibold px-3 my-3" type="password" name="password" />
-                    <input className="block w-full outline-none bg-blue-500  py-2 text-base font-semibold px-3 my-3" type="submit" value="Registration" />
+                    <input placeholder="Your Name" className="block rounded-xl w-full outline-none bg-gray-100  py-2 text-base  px-3 my-3" type="text" name="name" />
+                    <input placeholder="Photo URL" className="block rounded-xl w-full outline-none bg-gray-100  py-2 text-base  px-3 my-3" type="text" name="photo" />
+                    <input placeholder="Email" className="block rounded-xl w-full outline-none bg-gray-100  py-2 text-base  px-3 my-3" type="email" name="email" />
+                    <input placeholder="Password" className="block rounded-xl w-full outline-none bg-gray-100  py-2 text-base  px-3 my-3" type="password" name="password" />
+                    <input className="block rounded-xl w-full outline-none duration-500 hover:bg-blue-700 bg-blue-500 cursor-pointer  py-2 text-base  px-3 my-3" type="submit" value="Registration" />
                 </form>
                 <div className="text-center">
                     <h1>Or</h1>
-                    <h1 onClick={handleGoogle} className="bg-blue-300 py-2 px-4 font-bold cursor-pointer">Login With Google</h1>
+                    <h1 onClick={handleGoogle} className="bg-orange-400 hover:bg-orange-500 duration-500 py-2 px-4 rounded-xl text-gray-800  cursor-pointer">Login With Google</h1>
                     <div className="flex justify-end">
                         <Link to='/login'>
-                            <p className="font-semibold py-2 hover:text-blue-500 cursor-pointer">Already have an Account? Please Login</p>
+                            <p className="duration-300 py-2 hover:text-blue-500 cursor-pointer text-sm">Already have an Account? Please Login</p>
                         </Link>
                     </div>
                 </div>
             </div>
+            <Link to='/'>
+            <button className='text-gray-300 md:py-3 md:px-7 px-3 py-1 duration-300 md:text-base  text-xs border-gray-400 border hover:shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] shadow-[rgba(17,_17,_26,_0.1)_0px_0px_12px] shadow-[rgba(220,220,221,0.73)] hover:shadow-[rgba(220,220,221,0.73)] rounded-xl absolute left-4 top-4'>Back Home</button>
+            </Link>
             <Toaster></Toaster>
         </div>
     );

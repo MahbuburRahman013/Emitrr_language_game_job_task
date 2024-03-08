@@ -83,8 +83,10 @@ const all_score = oneScor + twoScor + threeScor;
 
     return (
         <div>
-            <Navbar setLang={setLang}></Navbar>
-            <div className="my-14 p-5 border container mx-auto">
+            <h1 className="text-4xl font-bold text-center py-5 uppercase">Welcome to <span className="text-blue-500">language game</span> website</h1>
+            <div className="indigo-600 flex  gap-5 justify-center items-center backdrop-blur-sm rounded-xl bg-white/10 shadow-lg ring-1 ring-black/5">
+            <div className="flex-1"><Navbar setLang={setLang}></Navbar></div>
+            <div className="my-14 p-5 border-l container mx-auto">
                 <div>
 
                     {
@@ -106,6 +108,7 @@ const all_score = oneScor + twoScor + threeScor;
                 </div>
 
             </div>
+        </div>
         </div>
     );
 };

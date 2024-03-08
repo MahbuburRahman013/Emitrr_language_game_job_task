@@ -9,7 +9,7 @@
 //   const { data } = useQuery({
 //     queryKey: ["todos"],
 //     queryFn: async () => {
-//      const data1 = await axios.get("http://localhost:5000/allUsers")
+//      const data1 = await axios.get("https://emitrr-server.vercel.app/allUsers")
 //      console.log(data1.data)
 //     },
 //   });

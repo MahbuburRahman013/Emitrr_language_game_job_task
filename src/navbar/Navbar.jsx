@@ -21,11 +21,11 @@ const Navbar = ({ setLang }) => {
     }
 
     return (
-        <div className="container mx-auto px-5 lg:px-0">
-            <nav className="border border-gray-400 shadow-lg my-10 py-5 px-2 md:px-10 rounded-lg gap-5 flex items-center justify-around">
+        <div className="">
+            <nav className="shadow-lg h-full rounded-lg flex p-3  flex-col gap-y-10">
                 <Menu>
-                    <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-                        Select Language
+                    <MenuButton as={Button}>
+                        Language
                     </MenuButton>
                     <MenuList bgColor={'#fff'} padding="20px">
                         <MenuItem onClick={() => setLang('english')} mb='10px'>English</MenuItem>

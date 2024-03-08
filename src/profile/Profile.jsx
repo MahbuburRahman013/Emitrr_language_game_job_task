@@ -23,10 +23,10 @@ const Profile = () => {
 
     useEffect(() => {
         if (!loading) {
-            axios.get('http://localhost:5000/allUsers')
+            axios.get('https://emitrr-server.vercel.app/allUsers')
                 .then(res => {
-                    const profileUser = res.data.find(user1 => user1.email === user.email)
-                    const sortData = res.data.sort((a, b) => b.score - a.score)
+                    const profileUser = res?.data.find(user1 => user1?.email === user?.email)
+                    const sortData = res?.data.sort((a, b) => b.score - a.score)
                     setUsers(sortData)
                     setCurrentUsers(profileUser);
                 })
@@ -34,10 +34,10 @@ const Profile = () => {
     }, [loading, user])
 
     const handleReload = () => {
-        axios.get('http://localhost:5000/allUsers')
+        axios.get('https://emitrr-server.vercel.app/allUsers')
             .then(res => {
-                const profileUser = res.data.find(user1 => user1.email === user.email)
-                const sortData = res.data.sort((a, b) => b.score - a.score)
+                const profileUser = res?.data.find(user1 => user1?.email === user.email)
+                const sortData = res?.data.sort((a, b) => b.score - a.score)
                 setUsers(sortData)
                 setCurrentUsers(profileUser);
             })
@@ -58,17 +58,17 @@ const Profile = () => {
                                 user ? 
                                 <div>
                                 <div className='flex flex-col justify-center items-center gap-y-5'>
-                                    <img className='w-20 h-20 rounded-full' src={user.photoURL} />
-                                    <h1 className='text-2xl font-semibold'>Name:  {user.displayName}</h1>
-                                    <p className='text-xl text-blue-500 font-bold'>You got {currentUser.score}/18 score</p>
+                                    <img className='w-20 h-20 rounded-full' src={user?.photoURL} />
+                                    <h1 className='text-2xl font-semibold'>Name:  {user?.displayName}</h1>
+                                    <p className='text-xl text-blue-500 font-bold'>You got {currentUser?.score}/18 score</p>
                                 </div>
                                 <div className='my-5'>
                                     <h1 className='text-xl font-semibold'>Leader Board:</h1>
                                     <div className='border overflow-y-auto h-60 p-3'>
                                         {
-                                            users.map((user, index) => <div className='flex justify-between items-center' key={user._id}>
-                                                <p>{index + 1}. {user.name}</p>
-                                                <p>score: {user.score}</p>
+                                            users.map((user, index) => <div className='flex justify-between items-center' key={user?._id}>
+                                                <p>{index + 1}. {user?.name}</p>
+                                                <p>score: {user?.score}</p>
                                             </div>)
                                         }
                                     </div>
